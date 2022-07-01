@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&family=Prata&family=Trispace&display=swap");
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  background-color: #0c1429;
+  background: linear-gradient(#111c38, #324063) no-repeat;
+}
+img {
+  position: fixed;
+  left: 0;
+}
+header {
+  /* position: sticky;
+    top: 0; */
+  height: 10vh;
+  display: flex;
+  border-bottom: 1px rgba(255, 255, 255, 0.321) solid;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1429;
+}
+.nav-bar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar-item {
+  list-style: none;
+  margin: 10px;
+  transition: 0.5s;
+}
+.nav-bar-item a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  /* font: 10px 'Prata', serif; */
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.3s;
+  /* border: 1px white solid;
+    border-radius: 10px; */
+  /* font: 40px 'Trispace', sans-serif; */
+  font: 14px "Poppins", sans-serif;
+}
+.nav-bar:hover a {
+  transform: scale(1.4);
+  opacity: 0.5;
+  filter: blur(5px);
+}
+.nav-bar-item a:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  filter: blur(0);
+}
+.nav-bar-item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(252, 81, 130);
+  border-radius: 25px;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+.nav-bar-item a:hover::before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* *{border: 1px red solid;} */
